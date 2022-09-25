@@ -27,31 +27,6 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        elevation: 0,
-        leading: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Avatar(
-              radius: 18,
-              profileImage: "assets/images/profile.JPG",
-            )
-          ],
-        ),
-        title: const Icon(
-          TwitterIcon.twitterIcon,
-          size: 30,
-          color: Colors.blue,
-        ),
-        actions: const [
-          Icon(
-            Icons.auto_awesome_outlined,
-            size: 30,
-          )
-        ],
-      ),
       body: pages[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         onTap: (value) {
@@ -75,19 +50,31 @@ class _HomeState extends State<Home> {
             label: "label",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
+            icon: Icon(
+              Icons.search,
+              size: 28,
+            ),
             label: "label",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.keyboard_voice_outlined),
+            icon: Icon(
+              Icons.keyboard_voice_outlined,
+              size: 28,
+            ),
             label: "label",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.notifications_none_outlined),
+            icon: Icon(
+              Icons.notifications_none_outlined,
+              size: 28,
+            ),
             label: "label",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.local_post_office_outlined),
+            icon: Icon(
+              Icons.local_post_office_outlined,
+              size: 28,
+            ),
             label: "label",
           ),
         ],
