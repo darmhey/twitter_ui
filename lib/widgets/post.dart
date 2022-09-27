@@ -2,22 +2,35 @@ import 'package:flutter/material.dart';
 import 'package:twitter_ui/widgets/avatar.dart';
 
 class Post extends StatelessWidget {
-  const Post({Key? key}) : super(key: key);
+  final double radius;
+  final String image;
+  final String fullName;
+
+  final String userName;
+
+  final String timeStamp;
+  final String content;
+
+  const Post({
+    Key? key,
+    required this.radius,
+    required this.image,
+    required this.fullName,
+    required this.userName,
+    required this.timeStamp,
+    required this.content,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Divider(
-          color: Colors.grey,
-          thickness: 0.5,
-        ),
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Avatar(
-              radius: 20,
-              profileImage: "assets/images/profile.JPG",
+            Avatar(
+              radius: radius,
+              profileImage: image,
             ),
             Expanded(
               child: Padding(
@@ -31,42 +44,51 @@ class Post extends StatelessWidget {
                   children: [
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
-                          "Gbenga Akinyemi",
-                          style: TextStyle(
+                          fullName,
+                          style: const TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        VerticalSpace(
+                        const VerticalSpace(
                           verticalWidth: 5,
                         ),
                         Text(
-                          "@timotheus",
+                          // "@timotheus",  //"Gbenga Akinyemi",
+                          userName,
+                          style: const TextStyle(color: Colors.white70),
+                        ),
+                        const VerticalSpace(
+                          verticalWidth: 2,
+                        ),
+                        const Text(
+                          '.',
                           style: TextStyle(color: Colors.white70),
                         ),
-                        VerticalSpace(
+                        const VerticalSpace(
                           verticalWidth: 5,
                         ),
                         Text(
-                          "4m",
-                          style: TextStyle(color: Colors.white70),
+                          timeStamp,
+                          style: const TextStyle(color: Colors.white70),
                         ),
-                        VerticalSpace(
-                          verticalWidth: 78,
+                        const VerticalSpace(
+                          verticalWidth: 75,
                         ),
-                        Icon(
+                        const Icon(
                           Icons.more_horiz_outlined,
                           color: Colors.white70,
                         ),
                       ],
                     ),
-                    const Text(
-                      "This workshop includes a series of steps to convert an app without any state management to a fully centralized state management system. ",
-                      style: TextStyle(
+                    Text(
+                      content,
+                      style: const TextStyle(
                         color: Colors.white,
                         letterSpacing: 0.2,
+                        wordSpacing: 0.3,
                         fontSize: 16,
                       ),
                     ),

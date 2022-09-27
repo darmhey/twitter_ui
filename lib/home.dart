@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:twitter_ui/assets/icons/twitter_icon.dart';
 import 'package:twitter_ui/pages/homePage.dart';
 import 'package:twitter_ui/pages/messages.dart';
 import 'package:twitter_ui/pages/notification.dart';
 import 'package:twitter_ui/pages/search.dart';
 import 'package:twitter_ui/pages/spaces.dart';
-import 'package:twitter_ui/widgets/avatar.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
