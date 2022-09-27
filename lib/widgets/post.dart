@@ -102,7 +102,7 @@ class Post extends StatelessWidget {
                         children: const [
                           Icon(
                             Icons.chat_bubble_outline_outlined,
-                            color: Colors.white70,
+                            color: Colors.grey,
                             size: 20,
                           ),
                           VerticalSpace(
@@ -110,7 +110,7 @@ class Post extends StatelessWidget {
                           ),
                           Icon(
                             Icons.autorenew_outlined,
-                            color: Colors.white70,
+                            color: Colors.grey,
                             size: 20,
                           ),
                           VerticalSpace(
@@ -118,7 +118,7 @@ class Post extends StatelessWidget {
                           ),
                           Icon(
                             Icons.favorite_border_outlined,
-                            color: Colors.white70,
+                            color: Colors.grey,
                             size: 20,
                           ),
                           VerticalSpace(
@@ -126,7 +126,7 @@ class Post extends StatelessWidget {
                           ),
                           Icon(
                             Icons.ios_share_outlined,
-                            color: Colors.white70,
+                            color: Colors.grey,
                             size: 20,
                           ),
                         ],
@@ -140,7 +140,7 @@ class Post extends StatelessWidget {
         ),
         const Divider(
           color: Colors.grey,
-          thickness: 0.5,
+          thickness: 0.3,
         ),
       ],
     );

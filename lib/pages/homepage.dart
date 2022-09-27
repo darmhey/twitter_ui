@@ -5,7 +5,14 @@ import 'package:twitter_ui/widgets/post.dart';
 import '../assets/icons/twitter_icon.dart';
 import '../widgets/avatar.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   List<Widget> _getPost() {
     List<Post> posts = [
       const Post(
@@ -74,8 +81,6 @@ class HomePage extends StatelessWidget {
     ];
     return posts;
   }
-
-  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
